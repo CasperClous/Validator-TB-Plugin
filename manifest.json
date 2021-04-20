@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"applications": {
+		"gecko": {
+			"id": "clous.casper@gmail.com",
+			"strict_min_version": "68.7.0"
+		}
+	},
+	"name": "Validator",
+	"description": "Gives a score about the email received, without acces to the Message",
+	"permissions": ["storage", "messagesRead", "clipboardWrite"],
+	"message_display_action": {
+		"default_title": "Validator",
+		"default_icon": "icons/GreyC36px.png",
+		"default_popup": "popup/popup.html"
+	},
+	"version": "0.1"
+}

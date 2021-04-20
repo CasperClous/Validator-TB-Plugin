@@ -19,7 +19,7 @@ This plugin WILL NOT storage any of your information and will never read the bod
 ## Installation
 
 1. Download the github.
-2. get into the folder Validator-TB-Plugin.
+2. Get into the folder "Validator-TB-Plugin".
 3. Run `make` to generate the `xpi` file.
 4. In Thunderbird, go to the `Add-ons Manager`.
 5. Click `Install Add-on From File...` and select the `xpi` file from step 2.

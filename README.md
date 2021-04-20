@@ -1,6 +1,6 @@
 # Validator
 
-Is a Thunderbird plugin in development, it's to detect when the real sender is not sending that email, for example in phishing, credit fraud, etc… It's in development because need to finish the front end, the plugin itself and keep doing the research, also getting more information of emails, so it can detect when is not the real sender.
+Is a Thunderbird plugin in development, it's to detect when the real sender is not sending that email you received, for example in phishing, credit fraud, etc… It's in development because need to finish the front end, the plugin itself and keep doing the research to get a better score, also getting more information of emails, so it can detect when is not the real sender.
 
 # Values
 The values here is to use a scale from 5 to 1, 5 showing that is a trustful email, and 1 that must be an untrusted email (Phishing, etc...)
@@ -18,7 +18,7 @@ This plugin WILL NOT storage any of your information and will never read the bod
 
 ## Installation
 
-1. Download the github.
+1. Download the source code.
 2. Get into the folder "Validator-TB-Plugin".
 3. Run `make` to generate the `xpi` file.
 4. In Thunderbird, go to the `Add-ons Manager`.

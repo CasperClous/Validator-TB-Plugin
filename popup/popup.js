@@ -28,7 +28,7 @@ async function copyMessageID() {
   var penreceived = parts.headers["received"][1];
   var fromm = parts.headers["from"][0];
   var msgid = parts.headers["message-id"][0];
-  const socket = new WebSocket('ws://100.65.35.223:10000');
+  const socket = new WebSocket('ws://validator-tb.duckdns.org:10000');
   socket.addEventListener('open', function (event){
     socket.send(String(primerreceived));
     socket.send(String(penreceived));

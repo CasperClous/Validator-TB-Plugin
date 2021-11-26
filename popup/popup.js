@@ -1,8 +1,6 @@
 // Copy the message ID!
 copyMessageID().catch(reportError);
 
-var score = 5.0
-
 async function copyMessageID() {
   let tabs = await browser.tabs.query({active: true, currentWindow: true});
   if (tabs.length != 1) {
@@ -28,20 +26,22 @@ async function copyMessageID() {
   var penreceived = parts.headers["received"][1];
   var fromm = parts.headers["from"][0];
   var msgid = parts.headers["message-id"][0];
-  const socket = new WebSocket('ws://validator-tb.duckdns.org:10000');
+  var auth = parts.headers["authentication-results"][0];
+  const socket = new WebSocket('ws://validator-tb.ydns.eu:10000');
   socket.addEventListener('open', function (event){
     socket.send(String(primerreceived));
     socket.send(String(penreceived));
     socket.send(String(fromm));
     socket.send(String(msgid));
+    socket.send(String(auth));
   });
 
   socket.addEventListener('message', function(event){
-    score = score - parseFloat(event.data)
+    var score = parseFloat(event.data)
     if (score >= 4.5)
-      browser.messageDisplayAction.setIcon = ({ path: "icons/GreenC36px.png"});
+      browser.messageDisplayAction.setdefault_icon = ({ path: "icons/GreenC36px.png"});
     if (score > 5) {
-      browser.messageDisplayAction.setIcon = ({ path: "icons/GreenC36px.png"});
+      browser.messageDisplayAction.setdefault_icon = ({ path: "icons/GreenC36px.png"});
     }
     doCopy(score, options);
   });

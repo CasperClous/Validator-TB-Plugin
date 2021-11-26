@@ -9,8 +9,8 @@ It can also display a number 6, when this happens because the sender is not in t
 (In development)
 Change the color of the circle at the side of the name, changes in function of the score:
 Green is when the score is 4.0 or higher.
-Yellow is when the score is between 3.9 and 2.8.
-Reg is when the score is below 2.7.
+Yellow is when the score is between 3.9 and 2.5.
+Reg is when the score is below 2.4.
 Grey is the default color or when the email is not at the DB.
 
 # Privacy.

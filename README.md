@@ -3,8 +3,8 @@
 Is a Thunderbird plugin in development, it's to detect when the real sender is not sending that email you received, for example in phishing, credit fraud, etc… It's in development because need to finish the front end, the plugin itself and keep doing the research to get a better score, also getting more information of emails, so it can detect when is not the real sender.
 
 # Values
-The values here is to use a scale from 5 to 1, 5 showing that is a trustful email, and 1 that must be an untrusted email (Phishing, etc...)
-It can also display a number 6, when this happens because the sender is not in the BD.
+The values here is to use a scale from 5 to 0, 5 showing that is a trustful email, and 0 that must be an untrusted email (Phishing, etc...)
+It can also display a number 6, when this happens because the sender is not in the BD, so it can mean 2 things, we just dont have collected information about that sender, or it trying to make a phishing email with a similar sender so its not in the BD, so you must be carefull.
 
 (In development)
 Change the color of the circle at the side of the name, changes in function of the score:

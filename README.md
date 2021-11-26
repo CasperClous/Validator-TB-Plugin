@@ -25,4 +25,4 @@ This plugin WILL NOT storage any of your information and will never read the bod
 5. ![Gen XPI](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/XPI.gif)
 6. In Thunderbird, go to the `Add-ons Manager`.
 7. Click `Install Add-on From File...` and select the `xpi` file from step 2.
-8. ![Install](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/PlugInstal.gif)
+![Install](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/PlugInstal.gif)

@@ -16,8 +16,8 @@ You can blacklist an email adress, when the score is below 2, or is not in the D
 Change the color of the circle at the side of the name, changes in function of the score:
 Green is when the score is 4.0 or higher.
 Yellow is when the score is between 3.9 and 2.5.
-Reg is when the score is below 2.4.
-Grey is the default color or when the email is not at the DB.
+Red is when the score is below 2.4.
+Grey is the default color or when the email is not at the DB (score of 6).
 
 # Privacy
 This plugin WILL NOT storage any of your information and will never read the body of the email (Where the message of the sender is).

@@ -3,15 +3,15 @@
 	"applications": {
 		"gecko": {
 			"id": "clous.casper@gmail.com",
-			"strict_min_version": "68.7.0"
+			"strict_min_version": "78.6.1"
 		}
 	},
 	"name": "Validator",
-	"description": "Gives a score about the email received, without acces to the Message",
+	"description": "Gives a score about the email received, without acces to the Message body",
 	"permissions": ["storage", "messagesRead", "clipboardWrite"],
 	"message_display_action": {
 		"default_title": "Validator",
-		"default_icon": "icons/GreyC36px.png",
+		"default_icon": "icons/GreenC36px.png",
 		"default_popup": "popup/popup.html"
 	},
 	"version": "0.1"

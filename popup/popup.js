@@ -1,7 +1,29 @@
-// Copy the message ID!
 copyMessageID().catch(reportError);
 
+
+function BlackList(fromm){
+  const sockete = new WebSocket('ws://validator-tb.ydns.eu:10002');
+  sockete.addEventListener('open', function (event){
+    sockete.send(String(fromm));
+    let btnBlack = document.getElementById("blacklist");
+    btnBlack.style.backgroundColor = "green";
+  });
+}
+function whiteList(primerreceived, penreceived, fromm, msgid, auth){
+  const socketee = new WebSocket('ws://validator-tb.ydns.eu:10003');
+  socketee.addEventListener('open', function (event){
+    socketee.send(String(primerreceived));
+    socketee.send(String(penreceived));
+    socketee.send(String(fromm));
+    socketee.send(String(msgid));
+    socketee.send(String(auth));
+    let btnWhite = document.getElementById("whitelist");
+    btnWhite.style.backgroundColor = "green";
+  });
+}
+
 async function copyMessageID() {
+
   let tabs = await browser.tabs.query({active: true, currentWindow: true});
   if (tabs.length != 1) {
     throw new Error("Expected a single selected tab (got " + tabs.length + ")");
@@ -20,7 +42,6 @@ async function copyMessageID() {
     urlEncode: false,
     raw: false
   };
-
   let parts = await browser.messages.getFull(message.id);
   var primerreceived = parts.headers["received"][parts.headers["received"].length-1];
   var penreceived = parts.headers["received"][1];
@@ -38,12 +59,22 @@ async function copyMessageID() {
 
   socket.addEventListener('message', function(event){
     var score = parseFloat(event.data)
-    if (score >= 4.5)
-      browser.messageDisplayAction.setdefault_icon = ({ path: "icons/GreenC36px.png"});
-    if (score > 5) {
-      browser.messageDisplayAction.setdefault_icon = ({ path: "icons/GreenC36px.png"});
+    if (score >= 4.0 ){
+      browser.messageDisplayAction.setIcon({ path: "GreenC36px.png"});
     }
-    doCopy(score, options);
+    if (score < 2 || score > 5.1){
+      let btnBlack = document.getElementById("blacklist");
+      btnBlack.addEventListener("click", function(){
+        BlackList(fromm);
+      });
+    }
+    if (score == 6){
+      let btnBlanco = document.getElementById("whitelist");
+      btnBlanco.addEventListener("click", function(){
+        whiteList(primerreceived, penreceived, fromm, msgid, auth);
+      });
+    }
+      doCopy(score, options);
   });
 }
 

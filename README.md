@@ -4,7 +4,13 @@ Is a Thunderbird plugin in development, it's to detect when the real sender is n
 
 # Values
 The values here is to use a scale from 5 to 0, 5 showing that is a trustful email, and 0 that must be an untrusted email (Phishing, etc...)
-It can also display a number 6, when this happens because the sender is not in the BD, so it can mean 2 things, we just dont have collected information about that sender, or it trying to make a phishing email with a similar sender so its not in the BD, so you must be carefull.
+It can also display a number 6, when this happens because the sender is not in the DB, so it can mean 2 things, we just dont have collected information about that email direction, or it trying to make a phishing email with a similar sender so its not in the DB, so you must be carefull.
+
+#WhiteList (Add Email)
+You can add an email that is not in the database (In case your score is 6) or you can add an email, so the pluggin can work better, and give a better solution.
+
+#BlackList
+You can blacklist an email adress, when the score is below 2, or is not in the DB (Score of 6), and its affect the score given when another user ask for that email direction. 
 
 (In development)
 Change the color of the circle at the side of the name, changes in function of the score:

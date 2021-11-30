@@ -10,6 +10,7 @@ It can also display a number 6, when this happens because the sender is not in t
 You can add an email that is not in the database (In case your score is 6) or you can add an email, so the plugin can work better, and give a better solution.
 
 ## BlackList
+(BLACK LIST WHEN AN EMAIL IS NOT FROM THE SENDER ITS SAYING IT IS,  TRYING TO SUPPLANT AN IDENTITY. (COULD BE AN EMAIL THAT IS TRYING TO DO PHISHING) BUT DONT BLACKLIST AN MESSAJE THAT IS JUST AADVERTISEMENT.
 You can blacklist an email address, when the score is below 2 or if is not in the DB (Score of 6), and its affect the score given when another user ask for that email direction. 
 
 ## In development

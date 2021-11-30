@@ -35,13 +35,6 @@ async function copyMessageID() {
     throw new Error("No message selected");
   }
 
-  var options = {
-    prefix: "",
-    suffix: "",
-    copyBrackets: false,
-    urlEncode: false,
-    raw: false
-  };
   let parts = await browser.messages.getFull(message.id);
   var primerreceived = parts.headers["received"][parts.headers["received"].length-1];
   var penreceived = parts.headers["received"][1];
@@ -60,7 +53,17 @@ async function copyMessageID() {
   socket.addEventListener('message', function(event){
     var score = parseFloat(event.data)
     if (score >= 4.0 ){
-      browser.messageDisplayAction.setIcon({ path: "GreenC36px.png"});
+      document.getElementById("imagenScore").src="/icons/GreenC36px.png";
+    }
+    if (score > 5.0 ){
+      document.getElementById("imagenScore").src="/icons/GreyC36px.png";
+    }
+    if (score < 4.0 && score > 2.5 ){
+      document.getElementById("imagenScore").src="/icons/OrangeC36px.png";
+    }
+    if (score < 2.4 && score > 0 ){
+      document.getElementById("imagenScore").src="/icons/RedC36px.png";
+
     }
     if (score < 2 || score > 5.1){
       let btnBlack = document.getElementById("blacklist");
@@ -68,26 +71,15 @@ async function copyMessageID() {
         BlackList(fromm);
       });
     }
-    if (score == 6){
-      let btnBlanco = document.getElementById("whitelist");
-      btnBlanco.addEventListener("click", function(){
-        whiteList(primerreceived, penreceived, fromm, msgid, auth);
-      });
-    }
-      doCopy(score, options);
+    let btnBlanco = document.getElementById("whitelist");
+    btnBlanco.addEventListener("click", function(){
+      whiteList(primerreceived, penreceived, fromm, msgid, auth);
+    });
+      insertScore(score);
   });
 }
 
-async function doCopy(score, options) {
-  console.log(score);
-  // Remove the brackets from the message-id to maintain backwards compatability.
-  console.log("prefix: " + options.prefix + " Suffix: " + options.suffix);
-  let s = options.prefix + score + options.suffix;
-  await navigator.clipboard.writeText(s);
-  reportSuccess(s);
-}
-
-function reportSuccess(score) {
+async function insertScore(score) {
   var time = 1500;
   document.querySelector("#Validator").append(score);
   var timeout = setTimeout(() => {  window.close(); }, time);
@@ -100,10 +92,6 @@ function reportSuccess(score) {
   }
 }
 
-/**
- * There was an error executing the script.
- * Display the popup's error message, and hide the normal UI.
- */
 function reportError(error) {
   document.body.style.background = "#C80000";
   document.querySelector("#popup-content").classList.add("hidden");

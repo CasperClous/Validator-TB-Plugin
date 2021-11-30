@@ -32,4 +32,7 @@ In case you add a new email (Whitelist) or add an email to BlackList, it will on
 5. ![XPI](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/XPI.gif)
 6. In Thunderbird, go to the `Add-ons Manager`.
 7. Click `Install Add-on From File...` and select the `xpi` file from step 2.
-8. ![INSTALL](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/PlugInstal.gif)
+![INSTALL](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/PlugInstal.gif)
+
+## A little more help
+If you want to help more in this project, and I will be very grateful, you can use the python file name Cliente.py, is to fill the DB faster, Try to make sure that you have legit emails.

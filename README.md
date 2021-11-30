@@ -35,4 +35,4 @@ In case you add a new email (Whitelist) or add an email to BlackList, it will on
 ![INSTALL](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/PlugInstal.gif)
 
 ## A little more help
-If you want to help more in this project, and I will be very grateful, you can use the python file name Cliente.py, is to fill the DB faster, Try to make sure that you have legit emails.
+If you want to help more in this project, and I will be very grateful, you can use the python file name Cliente.py, is to fill the DB faster, Try to make sure that you have legit emails. (GMAIL)

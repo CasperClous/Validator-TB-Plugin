@@ -11,7 +11,8 @@
 	"permissions": ["storage", "messagesRead", "clipboardWrite"],
 	"message_display_action": {
 		"default_title": "Validator",
-		"default_popup": "popup/popup.html"
+		"default_popup": "popup/popup.html",
+		"default_icon" : "icons/Letter-V-icon.png"
 	},
 	"version": "0.1"
 }

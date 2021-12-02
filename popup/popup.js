@@ -58,10 +58,10 @@ async function copyMessageID() {
     if (score > 5.0 ){
       document.getElementById("body").style.backgroundColor = "#999999"
     }
-    if (score < 4.0 && score > 2.5 ){
+    if (score < 4.0 && score >= 2.5 ){
       document.getElementById("body").style.backgroundColor = "#ff8a10"
     }
-    if (score < 2.4 && score > 0 ){
+    if (score < 2.4 && score >= 0 ){
       document.getElementById("body").style.backgroundColor = "#e30022"
     }
     if (score < 2 || score > 5.1){

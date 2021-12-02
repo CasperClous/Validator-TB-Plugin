@@ -53,17 +53,16 @@ async function copyMessageID() {
   socket.addEventListener('message', function(event){
     var score = parseFloat(event.data)
     if (score >= 4.0 ){
-      document.getElementById("imagenScore").src="/icons/GreenC36px.png";
+      document.getElementById("body").style.backgroundColor = "#76ee00"
     }
     if (score > 5.0 ){
-      document.getElementById("imagenScore").src="/icons/GreyC36px.png";
+      document.getElementById("body").style.backgroundColor = "#999999"
     }
     if (score < 4.0 && score > 2.5 ){
-      document.getElementById("imagenScore").src="/icons/OrangeC36px.png";
+      document.getElementById("body").style.backgroundColor = "#ff8a10"
     }
     if (score < 2.4 && score > 0 ){
-      document.getElementById("imagenScore").src="/icons/RedC36px.png";
-
+      document.getElementById("body").style.backgroundColor = "#e30022"
     }
     if (score < 2 || score > 5.1){
       let btnBlack = document.getElementById("blacklist");

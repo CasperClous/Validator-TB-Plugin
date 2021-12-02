@@ -22,7 +22,7 @@ In case you add a new email (Whitelist) or add an email to BlackList, it will on
 1. clone the repository.
 2. Get into the folder "Validator-TB-Plugin".
 3. Run `make` to generate the `xpi` file.
-4. ![XPI]
+4. ![XPI](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/MAKE.gif)
 5. In Thunderbird, go to the `Add-ons Manager`.
 6. Click `Install Add-on From File...` and select the `xpi` file from the folder of step 2.
 ![INSTALL](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/Install.gif)

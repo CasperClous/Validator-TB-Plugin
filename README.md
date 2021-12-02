@@ -19,7 +19,7 @@ This plugin WILL NOT storage any of your information and will never read the bod
 In case you add a new email (Whitelist) or add an email to BlackList, it will only save some headers, and will NEVER save your email address.
 # Installation
 
-1. clone the github.
+1. clone the repository.
 2. Get into the folder "Validator-TB-Plugin".
 3. Run `make` to generate the `xpi` file.
 4. ![XPI](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/XPI.gif)

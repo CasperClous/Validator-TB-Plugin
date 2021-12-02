@@ -25,12 +25,12 @@ This plugin WILL NOT storage any of your information and will never read the bod
 In case you add a new email (Whitelist) or add an email to BlackList, it will only save some headers, and will NEVER save your email address.
 # Installation
 
-1. Download the source code.
-3. Get into the folder "Validator-TB-Plugin".
-4. Run `make` to generate the `xpi` file.
-5. ![XPI](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/XPI.gif)
-6. In Thunderbird, go to the `Add-ons Manager`.
-7. Click `Install Add-on From File...` and select the `xpi` file from step 2.
+1. clone the github.
+2. Get into the folder "Validator-TB-Plugin".
+3. Run `make` to generate the `xpi` file.
+4. ![XPI](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/XPI.gif)
+5. In Thunderbird, go to the `Add-ons Manager`.
+6. Click `Install Add-on From File...` and select the `xpi` file from the folder of step 2.
 ![INSTALL](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/PlugInstal.gif)
 
 ## A little more help

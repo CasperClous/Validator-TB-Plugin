@@ -26,7 +26,6 @@ In case you add a new email (Whitelist) or add an email to BlackList, it will on
 # Installation
 
 1. Download the source code.
-2. ![Download](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/clone.gif)
 3. Get into the folder "Validator-TB-Plugin".
 4. Run `make` to generate the `xpi` file.
 5. ![XPI](https://github.com/CasperClous/Validator-TB-Plugin/blob/main/XPI.gif)

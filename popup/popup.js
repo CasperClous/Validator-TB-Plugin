@@ -1,4 +1,4 @@
-copyMessageID().catch(reportError);
+obtenerScore().catch(reportError);
 
 
 function BlackList(fromm){
@@ -22,7 +22,7 @@ function whiteList(primerreceived, penreceived, fromm, msgid, auth){
   });
 }
 
-async function copyMessageID() {
+async function obtenerScore() {
 
   let tabs = await browser.tabs.query({active: true, currentWindow: true});
   if (tabs.length != 1) {

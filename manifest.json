@@ -7,7 +7,7 @@
 		}
 	},
 	"name": "Validator",
-	"description": "Gives a score about the email received, without acces to the Message body",
+	"description": "Gives a score about the email received, without access the body of the message",
 	"permissions": ["storage", "messagesRead", "clipboardWrite"],
 	"message_display_action": {
 		"default_title": "Validator",

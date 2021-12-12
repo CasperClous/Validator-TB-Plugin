@@ -64,7 +64,7 @@ async function obtenerScore() {
     if (score < 2.4 && score >= 0 ){
       document.getElementById("body").style.backgroundColor = "#e30022"
     }
-    if (score < 2 || score == 6){
+    if (score <= 2 || score == 6){
       let btnBlack = document.getElementById("blacklist");
       btnBlack.addEventListener("click", function(){
         BlackList(fromm);

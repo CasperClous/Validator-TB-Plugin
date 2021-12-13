@@ -2,6 +2,7 @@ import imaplib
 import socket
 import string
 
+
 ClientSocket = socket.socket()
 host = 'validator-tb.ydns.eu'
 port = 10001
@@ -44,12 +45,17 @@ print(
 print(
     "Confirmar que tenga habilitado el acceso desde aplicaciones no seguras \" https://support.google.com/accounts/answer/6010255?hl=es#zippy=%2Cif-less-secure-app-access-is-on-for-your-account \" ")
 print("El correo y la contraseñas no son almacenadas en ningun lado, tanto de manera local como online")
-correo = input("Ingresar Correo Electronico: ")
-clave = input("Ingresar Contraseña: ")
 host = 'imap.gmail.com'
 imap = imaplib.IMAP4_SSL(host)
-imap.login(correo, clave)
-imap.select('Inbox')
+a = True
+while a == True:
+    try:
+        correo = input("Ingresar Correo Electronico: ")
+        clave = input("Ingresar Contraseña: ")
+        imap.login(correo, clave)
+        a = False
+    except Exception as e:
+        print(e)
 typ, data = imap.search(None, 'ALL')
 print("Enviando Informacion")
 for num in data[0].split():
@@ -83,7 +89,7 @@ for num in data[0].split():
         separador = " ##### "
         mensaje = "2" + separador + FROMM + separador + primerReceived + separador + MSGID + separador + AUTHRESULT
         ClientSocket.send(mensaje.encode())
-ClientSocket.send(b'byebye')
+ClientSocket.send(b'terminado')
 ClientSocket.close()
 print("Se termino de enviar la informacion")
 imap.close()
